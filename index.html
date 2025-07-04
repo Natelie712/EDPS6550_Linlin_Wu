@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LINLIN WU - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINLIN WU - Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
+  <div class="container">
 
     <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ul class="row text-center list-unstyled my-3">
+        <li class="col"><a href="#about">About Me</a></li>
+        <li class="col"><a href="#portfolio">Portfolio</a></li>
+        <li class="col"><a href="#resume">Resume</a></li>
+        <li class="col"><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- Header / Hero Section -->
-    <header>
+    <header class="row text-center my-4">
+      <div class="col">
         <h1>LINLIN WU</h1>
         <p>PhD Student | AI Researcher | Learning Sciences Enthusiast</p>
         <img src="headshot.jpg" alt="Headshot of Linlin Wu" width="200">
+      </div>
     </header>
 
-    <!-- About Me Section -->
     <!-- SECTION: About Me -->
-    <section id="about">
+    <section id="about" class="row my-4">
+      <div class="col">
         <h2>About Me</h2>
         <p>I am a PhD student in the Learning and Cognition Program at the Department of Educational Psychology. My research focuses on AI safety, and fairness in NLP.</p>
         <ul>
-            <li>PhD Student, Educational Psychology</li>
-            <li>Machine Learning & Learning Science</li>
-            <li>Skilled in PyTorch, Python, Javascript</li>
+          <li>PhD Student, Educational Psychology</li>
+          <li>Machine Learning & Learning Science</li>
+          <li>Skilled in PyTorch, Python, Javascript</li>
         </ul>
+      </div>
     </section>
 
-    <!-- Portfolio Section -->
     <!-- SECTION: Portfolio -->
-    <section id="portfolio">
+    <section id="portfolio" class="row my-4">
+      <div class="col">
         <h2>Portfolio</h2>
         <p>Here are some of my selected projects:</p>
         <ul>
-            <li><a href="project1.html">Fairness-aware Text Classification in Online Math Discussions</a></li>
+          <li><a href="project1.html">Fairness-aware Text Classification in Online Math Discussions</a></li>
         </ul>
+      </div>
     </section>
 
-    <!-- Resume Section -->
     <!-- SECTION: Resume -->
-    <section id="resume">
+    <section id="resume" class="row my-4">
+      <div class="col">
         <h2>Resume</h2>
         <h3>Previous Positions</h3>
         <ul>
-            <li>Research Assistant, University of Utah</li>
+          <li>Research Assistant, University of Utah</li>
         </ul>
+      </div>
     </section>
 
-    <!-- Contact Section -->
     <!-- SECTION: Contact -->
-    <section id="contact">
+    <section id="contact" class="row my-4">
+      <div class="col text-center">
         <h2>Contact Me</h2>
         <p>Email: linlin.wu@utah.edu</p>
+      </div>
     </section>
 
+  </div>
 </body>
 </html>
+
