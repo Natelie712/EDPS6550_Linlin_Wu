@@ -1,80 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LINLIN WU - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>LINLIN WU — Portfolio</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <!-- Skip link -->
+  <a class="skip-to-content sr-only sr-only-focusable" href="#main">Skip to content</a>
 
-    <!-- Navigation -->
-    <nav>
-      <ul class="row text-center list-unstyled my-3">
-        <li class="col"><a href="#about">About Me</a></li>
-        <li class="col"><a href="#portfolio">Portfolio</a></li>
-        <li class="col"><a href="#resume">Resume</a></li>
-        <li class="col"><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="#">
+        <i class="fas fa-graduation-cap mr-2"></i>LINLIN WU
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsMain">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#code">Code</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Header / Hero Section -->
-    <header class="row text-center my-4">
-      <div class="col">
-        <h1>LINLIN WU</h1>
-        <p>PhD Student | AI Researcher | Learning Sciences Enthusiast</p>
-        <img src="headshot.jpg" alt="Headshot of Linlin Wu" width="200">
+  <main id="main">
+    <!-- HERO -->
+    <header class="jumbotron jumbotron-fluid mb-0 text-center bg-hero">
+      <div class="container">
+        <img src="headshot.jpg" alt="Headshot of Linlin Wu" class="hero-headshot rounded-circle shadow-sm mb-3 animate__animated animate__fadeInDown" width="160" height="160" />
+        <h1 class="display-4 font-weight-bold animate__animated animate__fadeInUp">AI Research · Learning Sciences</h1>
+        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+          PhD Student · Fairness · Safety · NLP
+        </p>
+        <a href="#portfolio" class="btn btn-primary btn-lg mt-2 lift">
+          <i class="fas fa-th-large mr-2"></i>View Work
+        </a>
       </div>
     </header>
 
-    <!-- SECTION: About Me -->
-    <section id="about" class="row my-4">
-      <div class="col">
-        <h2>About Me</h2>
-        <p>I am a PhD student in the Learning and Cognition Program at the Department of Educational Psychology. My research focuses on AI safety, and fairness in NLP.</p>
-        <ul>
-          <li>PhD Student, Educational Psychology</li>
-          <li>Machine Learning & Learning Science</li>
-          <li>Skilled in PyTorch, Python, Javascript</li>
-        </ul>
+    <!-- ABOUT -->
+    <section id="about" class="section container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 class="section-title">About Me</h2>
+          <p>
+            I am a PhD student in the Learning and Cognition Program (Educational Psychology).
+            My research focuses on <strong>AI safety</strong> and <strong>fairness in NLP</strong>. I care about
+            human-centered evaluation, rigorous methods, and reproducible science.
+          </p>
+          <ul class="list-unstyled icon-list">
+            <li><i class="fas fa-university"></i> University of Utah — Educational Psychology (PhD)</li>
+            <li><i class="fas fa-robot"></i> Machine Learning & Learning Sciences</li>
+            <li><i class="fas fa-code"></i> PyTorch · Python · JavaScript</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9 rounded shadow-sm overflow-hidden">
+            <img src="headshot.jpg" alt="About section image" class="embed-responsive-item">
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION: Portfolio -->
-    <section id="portfolio" class="row my-4">
-      <div class="col">
-        <h2>Portfolio</h2>
-        <p>Here are some of my selected projects:</p>
-        <ul>
-          <li><a href="project1.html">Fairness-aware Text Classification in Online Math Discussions</a></li>
-        </ul>
+    <!-- SKILLS -->
+    <section id="skills" class="section bg-light py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">Skills</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge badge-primary m-2 p-2">NLP</span>
+          <span class="badge badge-secondary m-2 p-2">Fairness</span>
+          <span class="badge badge-info m-2 p-2">RL</span>
+          <span class="badge badge-success m-2 p-2">PyTorch</span>
+          <span class="badge badge-warning m-2 p-2">Data Viz</span>
+          <span class="badge badge-dark m-2 p-2">Bootstrap 4</span>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6 mb-3">
+            <label class="d-flex justify-content-between">
+              <span>Python</span><span>90%</span>
+            </label>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="d-flex justify-content-between">
+              <span>JavaScript</span><span>75%</span>
+            </label>
+            <div class="progress">
+              <div class="progress-bar bg-success" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION: Resume -->
-    <section id="resume" class="row my-4">
-      <div class="col">
-        <h2>Resume</h2>
-        <h3>Previous Positions</h3>
-        <ul>
-          <li>Research Assistant, University of Utah</li>
-        </ul>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section container py-5">
+      <h2 class="section-title text-center">Portfolio</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 lift">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-balance-scale mr-2"></i>Fairness-aware Text Classification</h5>
+              <p class="card-text">Multi-label classification of math discussions with fairness constraints.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 lift">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-chalkboard-teacher mr-2"></i>Classroom Discourse Mining</h5>
+              <p class="card-text">Turn-level discourse move detection; connects pedagogy signals to outcomes.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 lift">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-shield-alt mr-2"></i>Safe Reasoning for LLMs</h5>
+              <p class="card-text">Robust reward modeling to curb reward hacking in instructional agents.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION: Contact -->
-    <section id="contact" class="row my-4">
-      <div class="col text-center">
-        <h2>Contact Me</h2>
-        <p>Email: linlin.wu@utah.edu</p>
+    <!-- CODE -->
+    <section id="code" class="section bg-light py-5">
+      <div class="container">
+        <h2 class="section-title text-center">Code Snippets</h2>
+        <div class="position-demo mx-auto">
+          <img src="code-bg.jpg" alt="Code background" class="w-100 rounded shadow-sm" />
+          <span class="badge badge-pill badge-primary position-badge">New</span>
+        </div>
       </div>
     </section>
 
-  </div>
+    <!-- RESUME -->
+    <section id="resume" class="section container py-5">
+      <h2 class="section-title text-center">Resume</h2>
+      <ul class="timeline list-unstyled">
+        <li class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>Research Assistant — University of Utah</h5>
+            <small class="text-muted">2023–Present</small>
+            <p>Fairness in NLP, reward modeling, and classroom discourse analysis.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section bg-dark text-white py-5">
+      <div class="container text-center">
+        <h2 class="section-title text-white">Contact</h2>
+        <p class="mb-4">Email: <a class="text-white" href="mailto:linlin.wu@utah.edu">linlin.wu@utah.edu</a></p>
+        <a class="btn btn-outline-light m-1 lift" href="https://github.com/" target="_blank">
+          <i class="fab fa-github mr-2"></i>GitHub
+        </a>
+        <a class="btn btn-outline-light m-1 lift" href="#" target="_blank">
+          <i class="fab fa-linkedin mr-2"></i>LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center small py-4 bg-white">
+    <span>&copy; <span id="year"></span> LINLIN WU</span>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 
