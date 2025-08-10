@@ -1,81 +1,112 @@
+/* ===== Base & Typography ===== */
+:root{
+  --brand: #0069d9; /* Bootstrap primary-ish */
+  --ink: #2b2d30;
+  --bg: #f7f8fb;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
-  background-color: #f8f9fa;
-  font-family: Arial, sans-serif;
-  color: #333;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
 }
 
-header h1 {
-  color: #007bff;
+/* Accessible focus */
+a:focus, button:focus {
+  outline: 3px dashed rgba(0,0,0,.25);
+  outline-offset: 2px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
+/* Navbar brand hover transition */
+.navbar-brand { transition: transform .2s ease; }
+.navbar-brand:hover { transform: translateY(-1px); }
+
+/* Subtle lift effect for interactive cards/buttons */
+.lift { transition: transform .2s ease, box-shadow .2s ease; }
+.lift:hover, .lift:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
 }
 
-nav ul li {
-  margin: 0 10px;
+/* ===== Sections ===== */
+.section-title {
+  font-weight: 800;
+  letter-spacing: .3px;
+  margin-bottom: 1rem;
 }
 
-nav a {
-  text-decoration: none;
-  color: #007bff;
+.section {
+  scroll-margin-top: 80px; /* for sticky navbar */
 }
 
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 20px;
+/* ===== Hero ===== */
+.bg-hero {
+  background: radial-gradient(1200px 400px at 50% -10%, rgba(0,105,217,.20), transparent 60%), #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-@media (min-width: 768px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  section,
-  header {
-    grid-column: span 2;
-  }
-
-  nav ul {
-    justify-content: space-evenly;
-  }
+.hero-headshot {
+  object-fit: cover;
 }
 
+/* ===== Icon list ===== */
+.icon-list li { margin: .4rem 0; }
+.icon-list i { color: var(--brand); width: 1.25rem; text-align: center; margin-right: .4rem; }
 
-section {
-  background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+/* ===== Absolute positioning demo ===== */
+.position-demo {
+  position: relative;
+  max-width: 640px;
 }
 
+.position-demo .position-badge {
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  font-weight: 600;
+  padding: .5rem .8rem;
+}
 
-img {
-  margin-top: 10px;
+/* ===== Timeline ===== */
+.timeline { position: relative; padding-left: 1.75rem; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0; left: .5rem;
+  width: 3px; height: 100%;
+  background: linear-gradient(var(--brand), rgba(0,0,0,.1));
+  border-radius: 2px;
+}
+.timeline-item { position: relative; margin-bottom: 1.75rem; }
+.timeline-dot {
+  position: absolute;
+  left: .25rem; top: .25rem;
+  width: .75rem; height: .75rem;
+  background: var(--brand);
   border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0,105,217,.15);
+}
+.timeline-content {
+  background: #fff;
+  border-radius: .75rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
 }
 
+/* ===== Footer ===== */
+footer { background: #fff; }
 
-#about img {
-  float: left;
-  margin-right: 15px;
-  width: 120px;
-}
+/* ===== Utilities ===== */
+.rounded { border-radius: .75rem !important; }
+.rounded-circle { border-radius: 50% !important; }
 
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
+/* ===== Responsive tweaks ===== */
+@media (min-width: 992px){
+  .jumbotron { padding-top: 4rem; padding-bottom: 4rem; }
 }
