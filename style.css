@@ -5,9 +5,7 @@
   --bg: #f7f8fb;
 }
 
-html, body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
 body {
   background-color: var(--bg);
@@ -40,9 +38,7 @@ a:focus, button:focus {
   margin-bottom: 1rem;
 }
 
-.section {
-  scroll-margin-top: 80px; /* for sticky navbar */
-}
+.section { scroll-margin-top: 80px; } /* for sticky navbar */
 
 /* ===== Hero ===== */
 .bg-hero {
@@ -51,24 +47,31 @@ a:focus, button:focus {
   padding-bottom: 3rem;
 }
 
-.hero-headshot {
-  object-fit: cover;
-}
+.hero-headshot { object-fit: cover; }
 
 /* ===== Icon list ===== */
 .icon-list li { margin: .4rem 0; }
 .icon-list i { color: var(--brand); width: 1.25rem; text-align: center; margin-right: .4rem; }
 
-/* ===== Absolute positioning demo ===== */
-.position-demo {
+/* ===== Absolute/Relative positioning demo (no image) ===== */
+.position-demo{
   position: relative;
   max-width: 640px;
+  height: 360px;                 /* 16:9 area */
+  border-radius: .75rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e9f2ff, #f7f8fb);
 }
-
-.position-demo .position-badge {
+.position-filler{
   position: absolute;
-  top: 6%;
-  left: 6%;
+  inset: 0;
+  font-weight: 600;
+  color: rgba(0,0,0,.45);
+}
+.position-badge{
+  position: absolute;
+  top: 12px;
+  left: 12px;
   font-weight: 600;
   padding: .5rem .8rem;
 }
