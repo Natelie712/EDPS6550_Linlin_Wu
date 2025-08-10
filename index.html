@@ -31,7 +31,7 @@
       <a class="navbar-brand font-weight-bold" href="#">
         <i class="fas fa-graduation-cap mr-2"></i>LINLIN WU
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMain">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMain" aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarsMain">
@@ -105,7 +105,7 @@
               <span>Python</span><span>90%</span>
             </label>
             <div class="progress">
-              <div class="progress-bar" style="width: 90%"></div>
+              <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
           <div class="col-md-6 mb-3">
@@ -113,7 +113,7 @@
               <span>JavaScript</span><span>75%</span>
             </label>
             <div class="progress">
-              <div class="progress-bar bg-success" style="width: 75%"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -154,6 +154,19 @@
       </div>
     </section>
 
+    <!-- CODE -->
+    <section id="code" class="section bg-light py-5">
+      <div class="container">
+        <h2 class="section-title text-center">Code Snippets</h2>
+        <div class="position-demo mx-auto rounded shadow-sm">
+          <div class="position-filler d-flex align-items-center justify-content-center">
+            <i class="fas fa-code mr-2"></i> Code background
+          </div>
+          <span class="badge badge-pill badge-primary position-badge">New</span>
+        </div>
+      </div>
+    </section>
+
     <!-- RESUME -->
     <section id="resume" class="section container py-5">
       <h2 class="section-title text-center">Resume</h2>
@@ -174,10 +187,10 @@
       <div class="container text-center">
         <h2 class="section-title text-white">Contact</h2>
         <p class="mb-4">Email: <a class="text-white" href="mailto:linlin.wu@utah.edu">linlin.wu@utah.edu</a></p>
-        <a class="btn btn-outline-light m-1 lift" href="https://github.com/" target="_blank">
+        <a class="btn btn-outline-light m-1 lift" href="https://github.com/" target="_blank" rel="noopener">
           <i class="fab fa-github mr-2"></i>GitHub
         </a>
-        <a class="btn btn-outline-light m-1 lift" href="#" target="_blank">
+        <a class="btn btn-outline-light m-1 lift" href="#" target="_blank" rel="noopener">
           <i class="fab fa-linkedin mr-2"></i>LinkedIn
         </a>
       </div>
@@ -189,10 +202,12 @@
   </footer>
 
   <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
